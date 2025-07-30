@@ -1,0 +1,476 @@
+/*** STEPATHON - Responsive Styles - Start ***/
+
+@media screen and (max-width: 1920px) {
+
+	.olympiad-body-rtcont {
+		padding: 0;
+	}
+
+}
+
+@media screen and (max-width: 1440px) {
+
+	.olympiad-header-wrapper {
+		background-position: left top;
+	}
+	
+}
+
+@media screen and (max-width: 1366px) {
+	
+	
+	
+}
+
+@media screen and (max-width: 1024px) {
+
+	.olympiad-pg {
+		overflow-x: hidden;
+	}
+
+	.olympiad-header-lt h1.caption {
+		font-size: 50px;
+	}
+
+	.olympiad-header-lt h2.sub-caption {
+		font-size: 30px;
+		margin-top: 25px;
+	}
+
+	.olympiad-banner-weblink-cont a {
+		font-size: 28px;
+	}
+
+	.olympiad-banner-date {
+		font-size: 14.5px;
+		margin-left: 40px;
+		margin-top: 165px;
+	}
+
+	.olympiad-rt-banner-section {
+		padding-bottom: 40px;
+	}
+
+	.olympiad-banner-weblink-caption, .olympiad-banner-weblink-cont, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		margin-left: 40px;
+	}
+
+	.olympiad-freetest-cont {
+		width: 70%;
+	}
+
+	.olympiad-freetest-btn-wrapper .olympiad-freetest-btn {
+		font-size: 20px;
+	}
+
+	.olympiad-freetest-cont .olympiad-freetest-content {
+		font-size: 18px;
+	}
+
+	.olympiad-faq-cont .panel-group .panel-title {
+		font-size: 20px;
+	}
+
+	.enrol-container {
+		margin-left: 110px;
+	}
+
+	.info-contact-emobile .email-section, .info-contact-emobile .mobile-section {
+		margin-right: 20px;
+	}
+
+	.olympiad-rt-banner-section, .limitedseat-cont {
+	    margin-left: 20%;
+	    margin-top: -20px;
+	    width: 85%;		
+	}
+
+	.limitedseat-cont {
+		margin-top: 25px;
+	}
+
+	.olympiad-banner-section {
+		margin-top: 70px;
+	}
+
+	
+	
+}
+
+@media screen and (max-width: 800px) {
+
+	.olympiad-header-lt h1.caption {
+		font-size: 35px;
+	}
+
+	.olympiad-header-lt h1 .fi-ele, .olympiad-header-lt h1 .se-ele, .olympiad-header-lt h1 .th-ele, .olympiad-header-lt h1 .fo-ele {
+		margin-left: 0;
+	}
+
+	.olympiad-header-lt h2.sub-caption {
+		font-size: 23px;
+	}
+
+	.inaugural-offer-container {
+		margin-top: 200px;
+	}
+
+	.olympiad-faq-cont {
+		margin: 30px 0;
+	}
+
+	.olympiad-rt-banner-section {
+		margin-top: 0;
+	}
+
+	.olympiad-body-rtcont {
+		min-height: 500px;
+	}
+
+	.olympiad-rt-banner-section {
+		/*background: rgba(0, 0, 0, 0) url("../img/stepathon-rt-banner-tablet.png") no-repeat scroll center top;*/
+	}
+
+	.olympiad-banner-date {
+	    font-size: 14.5px;
+	    margin-left: -70px;
+	    margin-top: 170px;
+	    text-align: center;
+	}
+
+	.olympiad-banner-weblink {
+		width: 40%;
+		margin: 20px auto;
+	}
+
+	.olympiad-banner-weblink-caption, .olympiad-banner-weblink-cont, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		margin-left: 0;
+	}
+
+	.olympiad-freetest-cont {
+	    margin: 0 auto;
+	    overflow: hidden;
+	    position: relative;
+	    width: 40%;
+	}
+
+	.olympiad-freetest-btn-wrapper {
+		width: 40%;
+		margin: 30px auto 0;
+	}
+
+	.info-contact-emobile, .info-contact-cell .step-logo, .step-copyrights-container {
+		text-align: center;
+	}
+
+	.hindu-footer-logo {
+		float: none;
+		text-align: center;
+	}	
+
+	.hindu-glogo {
+		width: 45%;
+	}
+
+	.olympiad-banner-section img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.olympiad-caption-cont {
+		text-align: center;
+		padding: 35px 0;
+	}
+
+	.olympiad-rt-banner-section, .limitedseat-cont {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.olympiad-enroll-sect, .olympiad-rt-banner-section .o-google-links, .olympiad-rt-caption {
+		display: none;
+	}
+
+	.olympiad-rt-section {
+		padding: 50px 0 0;
+	}
+
+	.olympiad-body-rtcont {
+		min-height: auto;
+	}
+	
+}
+
+@media screen and (max-width: 768px) {
+
+	.hindu-glogo {
+		width: auto;
+	}
+
+	.hindu-glogo img {
+		width: 60%;
+	}
+
+	.olympiad-banner-section {
+		margin-top: 80px;
+	}
+	.olympiad-caption-cont .olympiad-caption {
+	font-size: 20px;
+	}
+	.olympiad-caption-cont .olympiad-subcaption {
+		font-size: 20px;
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+
+	.olympiad-header-lt h1 {
+		text-align: center;
+	}
+
+	.olympiad-header-lt h1 .fi-ele, .olympiad-header-lt h1 .se-ele, .olympiad-header-lt h1 .th-ele, .olympiad-header-lt h1 .fo-ele {
+		display: inline-block;
+	}
+
+	.hindu-glogo {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 200px;
+	}
+
+	.hindu-footer-logo {
+		width: 98%;
+	}
+
+	.hhd-step-contact {
+		position: relative;
+		clear: both;
+	}
+
+	.olympiad-header-lt {
+		display: none;	
+	}
+
+	.hindu-glogo img {
+		width: 75%;
+	}
+
+	.olympiad-launch-date {
+		margin-bottom: 0;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+	.inaugural-offer-container {
+		margin: 130px 15% 50px;
+	}
+
+	.olympiad-banner-weblink, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		width: 50%;
+	}
+
+	.enrol-cont-cont {
+	    color: #666;
+	    font-size: 20px;
+	}
+	
+	.olympiad-rt-banner-section, .enrol-container {
+		padding: 0;
+ 	}
+
+ 	.olympiad-banner-section img {
+ 		width: 100%;
+ 	}
+
+ 	.olympiad-rt-section {
+ 		padding: 30px 0;
+ 	}
+
+ 	.o-google-links .btn-gl {
+ 		display: block;
+ 		margin-right: 0;
+ 		margin-bottom: 15px;
+ 	}	
+	
+}
+
+@media screen and (max-width: 480px) {
+
+	.olympiad-header-lt h1.caption {
+		margin-top: 0;
+	}
+
+	.inaugural-offer-container {
+		margin: 130px 0 50px;
+	}
+
+	.inaugural-offer-container .inaugural-offer-pricewrapper {
+		margin-top: 20px;
+	}
+
+	.olympiad-banner-weblink, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		/*width: 65%;*/
+		width: 75%;
+	}
+
+	.enrol-container {
+		margin-left: 0;
+	}
+
+	.enrol-cont-title {
+		margin-bottom: 10px;
+	}
+
+	.enrol-cont-cont > img {
+		width: 50px;
+	}
+
+	.olympiad-banner-section {
+		margin-top: 100px;
+	}
+
+	.olympiad-google-formwrapper .w-caption, .olympiad-google-formwrapper .j-caption {
+		text-align: center;
+		display: block;
+	}
+	
+}
+
+@media screen and (max-width: 375px) {
+
+	.olympiad-header-lt {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.olympiad-header-lt h1.caption {
+		font-size: 28px;
+	}
+
+	.inaugural-offer-container .inaugural-offer-title {
+		margin-left: 30px;
+	}
+
+	.inaugural-offer-container .inaugural-offer-pricewrapper {
+		/*margin-left: -15px;*/
+		margin-left: -30px;
+	}
+
+	.olympiad-content-wrapper .container {
+		padding: 0;
+	}
+
+	.olympiad-body-ltcont, .olympiad-faq-cont, .olympiad-body-rtcont  {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+/*	.olympiad-rt-banner-section {
+		background: rgba(0, 0, 0, 0) url("../img/stepathon-rt-banner-device.png") no-repeat scroll center top;
+	}*/
+
+	.olympiad-banner-weblink, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		width: 81%;
+	}
+
+	.info-contact-wrapper {
+		padding-top: 0;
+	}
+	
+	.olympiad-banner-weblink-cont {
+		font-size: 20px;
+		margin-top: 0;
+	}
+
+	.olympiad-freetest-cont .olympiad-freetest-title {
+		margin-bottom: 0;
+	}
+
+	.olympiad-freetest-btn-wrapper {
+		margin-top: 10px;
+	}
+
+	.olympiad-header-lt h2.sub-caption {
+		margin-top: 10px;
+ 	}	
+
+ 	.olympiad-caption-cont .olympiad-caption {
+ 		font-size: 18px;
+ 	}
+	.olympiad-caption-cont .olympiad-subcaption {
+			font-size: 18px;
+		}
+
+ 	.olympiad-google-formwrapper {
+ 		margin-left: 0;
+ 		margin-top: 30px;
+ 	}
+	
+}
+
+@media screen and (max-width: 360px) {
+
+	.olympiad-header-lt h2.sub-caption {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+
+	.inaugural-offer-container .inaugural-offer-pricewrapper {
+		background: rgba(0, 0, 0, 0) url("../img/offer-bg-device.png") no-repeat scroll left top;
+		margin-left: 0;
+		/*padding: 0px 20px;*/
+		padding: 5px 20px;
+	}
+
+	.olympiad-banner-weblink, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		width: 85%;
+	}
+
+	.info-contact-emobile .email-section, .info-contact-emobile .mobile-section {
+		margin-right: 0;
+	}
+	
+}
+
+@media screen and (max-width: 320px) {
+
+	.inaugural-offer-container .inaugural-offer-pricewrapper {
+		margin-left: -15px;
+		/*margin-left: 30px;*/
+		font-size: 30px;
+	}
+
+	.olympiad-banner-weblink, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		width: 97%;
+	}
+	
+	.olympiad-body-cont {
+		padding: 0;
+	}
+
+	.info-contact-cont, .info-contact-emobile, .info-contact-cell .step-logo, .step-copyrights-container {
+		padding: 0;
+	}
+
+	.olympiad-banner-weblink, .olympiad-freetest-cont, .olympiad-freetest-btn-wrapper {
+		width: 86%;
+	}
+
+/*	.olympiad-rt-banner-section {
+		background: rgba(0, 0, 0, 0) url("../img/stepathon-rt-banner-mobile.png") no-repeat scroll center top;
+	}*/
+
+	.olympiad-freetest-btn-wrapper .olympiad-freetest-btn {
+		font-size: 15px;
+		padding: 10px 20px; 
+		margin-left: 10%;
+	}	
+
+}
+
+/*** STEPATHON - Responsive Styles - End ***/

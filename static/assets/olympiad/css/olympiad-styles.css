@@ -1,0 +1,822 @@
+/*** Olympiad - Styles - Start ***/
+
+.olympiad-pg {
+	position: relative;
+	clear: both;
+	/*background: url('../img/header-bg-banner.png') no-repeat center top;*/
+}
+
+.olympiad-header-wrapper, .olympiad-header-lt, .olympiad-header-rt {
+	position: relative;
+}
+
+.olympiad-header-wrapper {
+	position: relative;
+  z-index: 100;
+  background-color: transparent;
+  background: url('../img/header-bg-banner.png') no-repeat center top;
+  padding-bottom: 140px;
+}
+
+.olympiad-content-wrapper {
+  background: transparent;
+  position: relative;
+  z-index: 80;
+  margin-top: -120px;
+}
+
+.olympiad-header-lt {
+	position: relative;
+}
+
+.olympiad-header-lt h1.caption {
+	color: #983882;
+    font-size: 55px;
+    font-weight: bold;   
+    margin-top: 20px; 
+    /*margin-top: 58px;*/
+}
+
+.olympiad-header-lt h1 .fi-ele {
+	display: block;
+	margin-left: 85px;
+}
+
+.olympiad-header-lt h1 .se-ele {
+    display: block;
+    margin-left: 105px;
+    margin-top: -5px;
+}
+
+.olympiad-header-lt h1 .th-ele {
+    display: block;
+    margin-left: 37px;
+    margin-top: -7px;
+}
+
+.olympiad-header-lt h1 .fo-ele {
+	display: block;
+	margin-left: 150px;
+}
+
+.olympiad-header-lt h2.sub-caption {
+    color: #fff;
+    display: block;
+    font-size: 32.3px;
+    font-weight: normal;
+    margin-top: 33px;
+    text-align: center;
+}
+
+.hindu-glogo {
+    float: right;
+    /*margin-right: -55px;*/
+    margin-right: 0;
+    margin-top: 10px;
+    /*margin-top: 20px;*/
+    position: relative;
+    text-align: right;
+}
+
+.info-contact-wrapper {
+	position: relative;
+	padding-top: 50px;
+	clear: both;
+}
+
+.info-contact-cell {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.info-contact-cell .step-logo {
+	text-align: right;
+}
+
+.info-contact-emobile {
+	position: relative;
+	text-align: right;
+	margin: 30px 0 25px;
+}
+
+.info-contact-emobile .email-section a{
+	color: #0874bc;
+	font-size: 25px;
+}
+
+.info-contact-emobile .email-section a:hover {
+	text-decoration: none;
+}
+
+.info-contact-emobile .mobile-section {
+    color: #656565;
+    display: block;
+    font-size: 28px;
+    margin-top: 0;
+    position: relative;
+}
+
+.olympiad-body-cont {
+	position: relative;
+	clear: both;
+}
+
+.olympiad-body-ltcont {
+  /*margin-top: 100px;*/
+}
+
+.olympiad-body-ltcont, .olympiad-body-rtcont {
+	position: relative;
+}
+
+.olympiad-body-rtcont {
+	/*min-height: 870px;*/
+}
+
+.olympiad-rt-banner-section {
+	position: relative;
+  background: #5b479e;
+	padding-bottom: 60px;
+}
+
+.olympiad-banner-date {
+    color: #fff;
+    display: block;
+    font-size: 21.5px;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-top: 220px;
+    position: relative;
+    transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg); 
+}
+
+.olympiad-banner-weblink {
+	clear: both;
+	position: relative;
+	margin: 50px 0 30px;
+}
+
+.olympiad-banner-weblink-caption {
+	color: #fff;
+	font-size: 20px;
+	margin-left: 65px;
+}
+
+.olympiad-banner-weblink-cont {
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+	display: block;
+	margin-left: 65px;
+	margin-top: 10px;
+}
+
+.olympiad-banner-weblink-cont a {
+	color: #fff;
+}
+
+.olympiad-banner-weblink-cont a:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.olympiad-freetest-cont {
+	position: relative;
+	margin: 30px 0;
+	margin-left: 65px;
+	color: #fff;
+	font-size: 20px;
+}
+
+.olympiad-freetest-cont .olympiad-freetest-title {
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.olympiad-freetest-cont .olympiad-freetest-content {
+	font-size: 20px;
+}
+
+.olympiad-freetest-btn-wrapper {
+	position: relative;
+	margin-left: 65px;
+	padding-top: 10px;
+}
+
+.olympiad-freetest-btn-wrapper .olympiad-freetest-btn {
+    background: #ff9900 none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 10px 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.olympiad-freetest-btn-wrapper .olympiad-freetest-btn:hover {
+	text-decoration: none;
+	opacity: 0.8;
+}
+
+.limitedseat-cont {
+	color: #e71c53;	
+	font-size: 24px;
+	font-style: italic;
+	text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.inaugural-offer-container {
+	position: relative;
+  margin: 150px 0 0 140px;
+	clear: both;	
+}
+
+.inaugural-offer-container .inaugural-offer-title {
+	color: #e71c53;
+	font-size: 35px;
+	margin-left: 60px;
+    -ms-transform: rotate(3deg); 
+    -webkit-transform: rotate(3deg); 
+    transform: rotate(3deg);
+    display: block;	
+}
+
+.inaugural-offer-container .inaugural-offer-pricewrapper {
+	background: url('../img/offer-bg.png') no-repeat left top;
+	width: 375px;
+	height: 67px;
+	color: #fff;
+	padding: 7px 40px;	
+}
+
+.inaugural-offer-pricewrapper .regprice {
+	font-size: 25px;
+	text-decoration: line-through;
+	margin-right: 10px;
+}
+
+.inaugural-offer-pricewrapper .offerprice {
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.inaugural-offer-pricewrapper .ocaption {
+	font-size: 25px;
+}
+
+.olympiad-banner-section {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.olympiad-caption-cont {
+    position: relative;
+    background: #e7f8fb;
+    padding: 20px 20px 50px 20%;
+	z-index: -1;
+}
+
+.olympiad-caption-cont .olympiad-caption {
+  color: #333333;
+  font-size: 26px;
+  font-family: 'Open Sans', sans-serif;
+	
+}
+
+.olympiad-caption-cont .olympiad-subcaption {
+  color: #333333;
+  font-size: 26px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.olympiad-faq-cont {
+	position: relative;
+	clear: both;
+  /*margin: 30px 50px;*/
+	margin: 30px 0 0;
+}
+
+.olympiad-faq-cont .panel-group .panel {
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.olympiad-faq-cont .panel-default > .panel-heading {
+	background: transparent;
+}
+
+.olympiad-faq-cont .panel-group .panel-title {
+	color: #333333;
+	font-size: 26px;
+	font-weight: 400;
+}
+.olympiad-faq-cont .panel-group .panel-title a[aria-expanded="true"] {
+  color: #13bad2;
+}
+.olympiad-faq-cont .panel-group ul {
+    list-style: outside none disc;
+    padding-left: 20px;	
+}
+
+.olympiad-faq-cont .panel-group ol {
+	padding-left: 10px;		
+}
+
+.olympiad-faq-cont .panel-group ul li, .olympiad-faq-cont .panel-group ol li {
+	font-size: 16px;
+	list-style-position: outside;
+	color: #666666;
+	margin-bottom: 10px;
+}
+
+.olympiad-faq-cont .panel-group p {
+	font-size: 18px;
+	color: #666666;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	line-height: 28px;
+}
+
+.olympiad-faq-cont .panel-heading .accordion-toggle {
+	display: block;
+}
+
+.olympiad-faq-cont .panel-heading .accordion-toggle:hover, .olympiad-faq-cont .panel-heading .accordion-toggle:focus {
+	text-decoration: none;
+}
+
+.olympiad-faq-cont .panel-heading .accordion-toggle:after {    
+    font-family: FontAwesome;
+    content: "\f106";    
+    float: right;        
+	font-size: 35px;
+}
+
+.olympiad-faq-cont .panel-heading .accordion-toggle.collapsed:after {    
+    content: "\f107";
+}
+
+.enrol-container {
+	position: relative;
+	margin: 30px 0 0 80px;
+	overflow: hidden;
+	clear: both;
+}
+
+.enrol-cont-title {
+	color: #666;
+	font-size: 20px;
+}
+
+.enrol-cont-cont {
+	position: relative;
+	font-size: 25px;
+	color: #666;
+}
+
+.enrol-cont-cont a {
+	color: #fe9900;	
+	font-weight: bold;	
+}
+
+.is_stuck {
+	top: 150px !important;
+}
+
+.take-test-container {
+	padding: 0;
+}
+
+.take-test-container .start-test-btnorang {
+    background: #ff6501 none repeat scroll 0 0;
+}
+.take-test-container .start-test-btn {
+    background: #15b3d4 none repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 40px 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.olympiad-google-formwrapper {
+  position: relative;
+  margin: 0 0 20px 20px;
+}
+
+.olympiad-google-formwrapper .w-caption {
+  color: #666;
+  font-size: 21px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+.olympiad-google-formwrapper .j-caption {
+  color: #666;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.o-google-links {
+  position: relative;
+  margin-top: 10px;
+}
+
+.o-google-links .btn-gl {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 5px 20px;
+  border: 2px solid #ccc;
+  background: #ccc;
+  font-size: 20px;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+
+.o-google-links .btn-gl:last-child {
+  margin-right: 0;
+}
+
+.o-google-links .btn-fp {
+  background: #178fa0;
+  border: 2px solid #178fa0;
+}
+
+.o-google-links .btn-fp:hover {
+  color: #178fa0;
+  background: transparent;
+  border: 2px solid #178fa0;
+}
+
+.o-google-links .btn-fst {
+  background: #c1512c;
+  border: 2px solid #c1512c;
+}
+
+.o-google-links .btn-fst:hover {
+  background: transparent;
+  color: #c1512c;
+  border: 2px solid #c1512c;
+}
+
+.o-google-links .btn-fsc {
+  background: #ce1386;
+  border: 2px solid #ce1386;
+}
+
+.o-google-links .btn-fsc:hover {
+  background: transparent;
+  color: #ce1386;
+  border: 2px solid #ce1386;
+}
+
+.olympiad-rt-section {
+  position: relative;
+  padding: 100px 0 0;
+  text-align: center;
+}
+
+.olympiad-rt-caption {
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+.olympiad-launch-date {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.olympiad-launch-date .lcaption {
+  color:#fff;
+  font-weight: 400;
+  font-size: 29px;
+}
+
+.olympiad-launch-date .dcaption {
+  color:#fff;
+  font-weight: bold;
+  font-size: 42px;
+  margin-top: -10px;
+}
+
+.olympiad-enroll-sect {
+  position: relative;
+}
+
+.olympiad-enroll-sect .en-caption {
+  color: #fff;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.olympiad-enroll-sect .o-google-links .btn-gl {
+  width: 90%;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+.ct-number-mobile {
+  display: none;
+}
+
+.social-media-container {
+
+}
+
+/*** Footer Styles - End ***/
+
+/*** Olympiad - Styles - End ***/
+
+.olympiad-logo-section {
+	margin: 100px auto 10px;
+    text-align: center;
+}
+.olympiad-logo-section h4 {
+	font-size: 48px;
+	margin: 20px 0px;
+	font-family: 'Roboto', sans-serif;
+}
+.olympiad-logo-section img {
+	display: inline-block;
+}
+.knowmore-btn {
+	font-size: 24px;
+    background: #ff672f;
+    border-radius: 5px;
+    padding: 10px 25px;
+	color: #fff;
+	text-transform: uppercase;
+    -webkit-box-shadow: 0 0px 6px 0 rgba(27,63,104,.75);
+    -moz-box-shadow: 0 0px 6px 0 rgba(27,63,104,.75);
+    box-shadow: 0 0px 6px 0 rgba(27,63,104,.75);
+    border: none;
+	display: block;
+	margin: 0px auto;
+	z-index: 1;
+	font-family: 'Roboto', sans-serif;
+	
+}
+.knowmore-btn:focus {
+	outline: none;
+}
+.input-field {
+    position: relative;
+}
+.input-field label {
+  color:#999; 
+  font-size:15px;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+  position:absolute;
+  pointer-events:none;
+  left:0px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.input-field label.active {
+    font-size: 12px;
+	margin-top: -5px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+.input-field input:not([type]), input[type=text], input[type=date], input[type=number], input[type=email], textarea {
+    font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+    padding: 10px 10px 0px 0px;
+    display: block;
+    width: 95%;
+    border: none;
+    color: #18b3d4;
+    font-weight: 500;
+    line-height: 22px;
+    border-bottom: 1px solid #c5c5c5;
+	margin:0 0 30px 0;
+}
+:invalid {
+  box-shadow: none;
+}
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+:-moz-ui-invalid {
+  box-shadow:none;
+}
+.required-field {
+	color:#db4437;
+}
+.enroll-register {
+    background: #3a7a83;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 40px;
+    position: relative;
+	text-transform:uppercase;
+    border: 0;
+    float: none;
+	display: block;
+	margin:40px auto;
+    -webkit-box-shadow: 0px 2px 7px -1px #797979;
+    -moz-box-shadow: 0px 2px 7px -1px #797979;
+    -ms-box-shadow: 0px 2px 7px -1px #797979;
+	box-shadow: 0px 2px 7px -1px #797979;
+}
+.input-field input:focus,.input-field textarea:focus {
+	outline: none;
+}
+.form-olympiad {
+	margin-top: 25px;
+}
+.reachus-title {
+	font-size: 36px;
+	margin-bottom: 40px;
+}
+.email-section {
+	font-size: 24px;
+    color: #989898;
+	margin-left: 60px;
+}
+.mobile-section {
+	color: #18b3d4;
+	font-size: 36px;
+	margin-left: 60px;
+}
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.olympiad-notice {
+    padding: 10px;
+    background: url(../img/BG_Notice.png) no-repeat;
+    margin: 30px 0px;
+	background-position: center;
+    background-size: cover;
+	min-height: 150px
+}
+.olympiad-notice .olympiad-notice-caption {
+    color: #fff;
+    padding: 0 142px 0 56px;
+    text-align: center;
+    font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	
+}
+.olympiad-notice .olympiad-notice-subcaption {
+    color: #ffff3d;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 22px;
+    font-weight: 700;
+	font-family: 'Roboto', sans-serif;
+}
+.olympiad-region-select {
+	text-align: center;
+	margin: 10px 0px;
+}
+.olympiad-region-select select {
+	font-size: 18px;
+	padding: 10px 30px;
+	color: #1f9192;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 0px 6px 0 rgba(51,51,51,.55);
+    -moz-box-shadow: 0 0px 6px 0 rgba(51,51,51,.55);
+    box-shadow: 0 0px 6px 0 rgba(51,51,51,.55);
+}
+.olympiad-region-select select option {
+	color: #333;
+}
+.winners_list .modal-header .close {
+    margin-top: -10px;
+}
+.winners_list .close {
+    float: right;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 1;
+    color: #f10901;
+    text-shadow: none;
+    opacity: 1;
+}
+.winners_list .close:focus {
+	outline: none;
+}
+.winners_list .modal-header {
+    min-height: 16.43px;
+    padding: 15px;
+    border-bottom: none;
+}
+.winners_list .modal-dialog {
+    width: 90%;
+    margin: 30px auto;
+}
+.ribbon{
+	color: #fff;
+	margin: 30px 0 50px;
+	position: relative;
+	text-transform: uppercase;
+	background: #17c4ff;
+	padding: 10px 15px;
+	clear: both;
+}
+ 
+div.left_ribbon{
+	color: #000;
+	margin-left: -25px;
+	display: table;
+}
+ 
+div.left_ribbon h2{
+	margin: 0 12px;
+	font-size: 24px;
+    font-weight: 700;
+}
+ 
+div.left_ribbon::before{
+	display: block;
+    width: 10px;
+    height: 0px;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    content: "";
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #007bcb;
+}
+div.left_ribbon::after{
+	display: block;
+    width: 10px;
+    height: 55px;
+    position: absolute;
+    bottom: 0px;
+    right: -5px;
+    content: "";
+    -ms-transform: skew(-10deg,0deg);
+    -webkit-transform: skew(-10deg,0deg);
+    -o-transform: skew(-10deg,0deg);
+    -moz-transform: skew(-10deg,0deg);
+	transform: skew(-10deg,0deg);
+    background: #fff;
+}
+.congrat_img {
+	display: table;
+    margin: 0 auto;
+}
+.winner-title {
+	color: #ff4a33;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;	
+	font-weight: 500;
+	margin: 5px 0px;
+    text-align: left;
+}
+.class-title {
+	color: #17c4ff;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin: 5px 5px 50px;
+    border-right: 2px solid #17c4ff;
+    min-height: 75px;
+    padding: 25px 10px;
+}
+.section-name {
+	text-align: left;
+	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+	color: #333333;	
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.section-school {
+	text-align: left;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+	color: #989898;
+	margin: 0;
+}

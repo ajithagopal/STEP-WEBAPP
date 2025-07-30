@@ -1,0 +1,5 @@
+writable/*
+vendor/*
+writable/log*
+.htaccess
+blog/*

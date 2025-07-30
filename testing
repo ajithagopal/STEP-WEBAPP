@@ -1,0 +1,1233 @@
+<section class="title-tabs-container">
+    <h1>English for</h1>
+</section>
+
+<section class="product-grid">
+    <div class="container">
+        <h2 class="product-grid-title">Our popular courses</h2>
+        <div class="row" id="product-loading">
+            <!--<img src="https://d266qgalneck7k.cloudfront.net/static/assets/images/loading.gif" style="margin:0px auto" />-->
+        </div>
+        <div class="row" id="product_table">
+            <?php foreach ($productData as $product) { ?>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-card-inner">
+                            <h1><?= $product['product_name'] ?></h1>
+                            <span>Starting from</span>
+                            <div class="price-div">₹<?= $product['offer_price'] ?></div>
+                            <a href="product/<?= $product['product_name_slug'] ?>" class="">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+
+
+<!--<div class="title-tabs-container">
+  <h1>English for</h1>
+
+ </section>
+ <section class="product-grid">
+        <div class="container">
+            <h2 class="product-grid-title">Our popular courses</h2>
+            <div class="row" id="product-loading">
+                <img src="https://d266qgalneck7k.cloudfront.net/static/assets/images/loading.gif" style="margin:0px auto" />
+            </div>
+            <div class="row" id="product_table">
+                <?php foreach ($productData as $product) { ?>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="plan-inner">
+                            <div class="entry-title">
+                                <img src="<?= $product['product_home_image'] ?>" class="img-fluid">
+                                <div class="product-name"><?= $product['product_name'] ?></div>
+                            </div>
+                            <div class="entry-content">
+                                <ul>
+                                    <?php foreach (explode('|', $product['product_home_desc']) as $desc) { ?>
+                                        <li><?= $desc ?></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>-->
+
+
+public function fetchProductData() {
+    $db = \Config\Database::connect();
+
+    $sql = "SELECT product_name, product_name_slug FROM product WHERE product_name IN (
+        'Speak with Confidence',
+        'STEP Coach',
+        'STEP for Competitive Exams',
+        'STEP for Working Professionals - Online'
+    )";
+
+    $query = $db->query($sql);
+
+    $productData = $query->getResultArray();
+
+    return $productData;
+}
+<section class="title-tabs-container">
+    <h1>English for</h1>
+</section>
+<div class="category-card-container">
+    <?php foreach ($productData as $index => $product) { ?>
+        <div class="category-card category-card-item-<?= $index + 1 ?>">
+            <a class="category-card-inner" href="<?= $product['product_link'] ?>" target="_blank"></a> 
+            <div class="category-card-inner" onclick="gotoURL('<?= $product['product_link'] ?>')">
+                <!-- Add more conditions here for different products -->
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
+<section class="product-grid">
+    <div class="container">
+        <div class="row" id="product-loading">
+            <!--<img src="https://d266qgalneck7k.cloudfront.net/static/assets/images/loading.gif" style="margin:0px auto" />-->
+        </div>
+        <div class="row" id="product_table">
+            <?php foreach ($productData as $product) { ?>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-card-inner">
+                            <h1><?= $product['product_name'] ?></h1>
+                            <span>Starting from</span>
+                            <div class="price-div">₹<?= $product['offer_price'] ?></div>
+                            <a href="product/<?= $product['product_name_slug'] ?>" class="">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+where shoud i mention the product link ,each product will come from database i want to put the html for each product in the learn more option ,simply i want if i press learn more it should go to the html file which i given
+<div class="title-tabs-container">
+    <h1>English for</h1>
+     <div class="category-card-container">
+              <div class="category-card category-card-item-1">
+                <div class="category-card-inner" onclick="gotoURL('general-communication-table.html')">
+                </div>
+              </div>
+              <div class="category-card category-card-item-2">
+                <div class="category-card-inner" onclick="gotoURL('working-professionals-table.html')">
+                </div>
+              </div>
+              <div class="category-card category-card-item-3">
+                <div class="category-card-inner" onclick="gotoURL('exam-preparation-table.html')">
+                </div>
+              </div>
+
+<div class="product-grid">
+    <div class="container">
+        <div class="row" id="product-loading">
+           
+        </div>
+        <div class="row" id="product_table">
+            <?php foreach ($productData as $product) { ?>
+                <div class="col-lg-3 col-md-6">
+                    <div class="category-card">
+                        <div class="category-card-inner">
+                            <h1><?= $product['product_name'] ?></h1>
+                            <span>Starting from</span>
+                              <div class="price-div">₹<?= $product['offer_price'] ?></div>
+                       
+                            <a href="<?= $product['product_name_slug'] ?>" class="">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+
+    I want to put the each product details in   <div class="category-card category-card-item-1">, <div class="category-card category-card-item-2">, <div class="category-card category-card-item-3"> not as a seperate coloum 
+<div class="title-tabs-container">
+    <h1>English for</h1>
+    <div class="category-card-container">
+        <div class="category-card category-card-item-1">
+            <div class="category-card-inner" onclick="gotoURL('general-communication-table.html')">
+                <!-- Include product details for category 1 -->
+                <h1><?= $productData[0]['product_name'] ?></h1>
+                <span>Starting from</span>
+                <div class="price-div">₹<?= $productData[0]['offer_price'] ?></div>
+                <a href="<?= $productData[0]['product_name_slug'] ?>" class="">Learn more</a>
+            </div>
+        </div>
+        <div class="category-card category-card-item-2">
+            <div class="category-card-inner" onclick="gotoURL('working-professionals-table.html')">
+                <!-- Include product details for category 2 -->
+                <h1><?= $productData[1]['product_name'] ?></h1>
+                <span>Starting from</span>
+                <div class="price-div">₹<?= $productData[1]['offer_price'] ?></div>
+                <a href="<?= $productData[1]['product_name_slug'] ?>" class="">Learn more</a>
+            </div>
+        </div>
+        <div class="category-card category-card-item-3">
+            <div class="category-card-inner" onclick="gotoURL('exam-preparation-table.html')">
+                <!-- Include product details for category 3 -->
+                <h1><?= $productData[2]['product_name'] ?></h1>
+                <span>Starting from</span>
+                <div class="price-div">₹<?= $productData[2]['offer_price'] ?></div>
+                <a href="<?= $productData[2]['product_name_slug'] ?>" class="">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+i dont want to repeat the code ,i want to give <div class="category-card-container">
+              <div class="category-card category-card-item">
+                  <div class="category-card-inner" onclick="gotoURL('xxx.html')"> in a loop 
+<div class="title-tabs-container">
+    <h1>English for</h1>
+    <div class="category-card-container">
+        <?php foreach ($productData as $product) { ?>
+            <div class="category-card category-card-item">
+                <div class="category-card-inner" onclick="gotoURL('<?= $product['html_file_name'] ?>')">
+                    <h1><?= $product['product_name'] ?></h1>
+                    <span>Starting from</span>
+                    <div class="price-div">₹<?= $product['offer_price'] ?></div>
+                    <a href="<?= $product['html_file_name'] ?>" class="">Learn more</a>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+<?php
+// Define an array with product names and their corresponding HTML file names
+$productHtmlFiles = array(
+    'product1' => 'product1.html',
+    'product2' => 'product2.html',
+    'product3' => 'product3.html'
+    // Add more products as needed
+);
+?>
+
+<div class="title-tabs-container">
+    <h1>English for</h1>
+    <div class="category-card-container">
+        <?php foreach ($productData as $product) { ?>
+            <?php
+            // Check if the product exists in the $productHtmlFiles array
+            if (isset($productHtmlFiles[$product['product_name']])) {
+                $htmlFileName = $productHtmlFiles[$product['product_name']];
+            } else {
+                $htmlFileName = '#'; // Default link if HTML file not found
+            }
+            ?>
+            <div class="category-card category-card-item">
+                <div class="category-card-inner" onclick="gotoURL('<?= $htmlFileName ?>')">
+                    <h1><?= $product['product_name'] ?></h1>
+                    <span>Starting from</span>
+                    <div class="price-div">₹<?= $product['offer_price'] ?></div>
+                    <a href="<?= $htmlFileName ?>" class="">Learn more</a>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+ i want this in loop <div class="category-card category-card-item-1,2,3,4,5">for each product each design
+
+ <div class="title-tabs-container">
+    <h1>English for</h1>
+    <div class="category-card-container">
+        <?php foreach ($productData as $index => $product) { ?>
+            <?php $className = "category-card-item-" . ($index + 1); ?>
+            <div class="category-card <?= $className ?>">
+                <div class="category-card-inner" onclick="gotoURL('<?= $product['product_name_slug'] ?>.html')">
+                    <h1><?= $product['product_name'] ?></h1>
+                    <span>Starting from</span>
+                    <div class="price-div">₹<?= $product['offer_price'] ?></div>
+                    <a href="<?= $product['product_name_slug'] ?>.html" class="">Learn more</a>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+    $("#contactform").submit(function(e) {
+            e.preventDefault();
+          var data = {
+            {% if resultdata['template'] == 'contact.html' %}
+              contact_type: $("#selContactFor").val(),
+              {% else %}
+              contact_type: 'Corporate',
+            {% endif %}
+              name: $("#txtPerson").val(),
+              contact_person: $("#txtName").val(),
+              phone: $("#txtPhone").val(),
+              email_id: $("#txtEmail").val(),
+              message: $("#txtMessage").val()
+          }
+          $.ajax({
+              url: "{{ config.API_URL }}send_enquiry",
+              type: 'POST',
+              dataType: 'json',
+              data: data,
+              success: function(d) {
+                  window.location.href="{{ resultdata['pageType'] }}?txtEmail="+$("#txtEmail").val();
+              },
+              error: function() {
+                  window.location.href="{{ resultdata['pageType'] }}";
+              }
+          });
+        });
+
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Example</title>
+    <script src="path/to/contact.js"></script> <!-- Include the external JavaScript file -->
+</head>
+<body>
+    <div class="contact-section">
+        <div class="contact-section-details">
+            <h2>General contact / support</h2>
+            <strong>Whatsapp or Phone</strong>
+            <a href="tel:919789883344">+91 9789883344</a>
+            <strong>Email</strong>
+            <a href="mailto:info@steptest.in">info@steptest.in</a>
+            <h2 class="mar-top">Operational hours</h2>
+            <span>10AM - 7.30PM (Weekdays)</span>
+            <h2 class="mar-top">Frequently asked questions (FAQs)</h2>
+            <a href="javascript:void(0)">Visit our Help Center</a>
+        </div>
+        <div class="contact-section-form">
+            <h2>Get in touch</h2>
+            <form id="contact-form">
+                <div class="form-field">
+                    <input type="text" name="name" id="txtName" class="form-field-text" placeholder="Name" required />
+                </div>
+                <div class="form-field">
+                    <input type="text" name="phone" id="txtPhone" class="form-field-text" placeholder="Phone" required />
+                </div>
+                <div class="form-field">
+                    <textarea name="message" id="txtMessage" class="form-field-text" placeholder="Message" required></textarea>
+                </div>
+                <button class="btn-default" type="submit" name="btnsubmit" id="btnsubmit" value="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+The URL you provided (http://localhost/stepwebsite/public/dynamic?name=Chandrika&phone=1234567890&message=Hai&btnsubmit=submit) seems to be a GET request URL with query parameters. It appears that you're passing form data as query parameters in the URL.
+
+In the context of a typical form submission, this approach is not standard. Normally, when you submit a form using the POST method, the data is sent in the request body, not as query parameters in the URL.
+
+To properly handle form submissions and check whether they are submitted correctly or not, you should follow these steps:
+
+    HTML Form: Make sure you have an HTML form that specifies the method as POST. Include form fields such as name, phone, message, and btnsubmit.
+
+    Server-side Script: Create a server-side script (PHP or another server-side language) to handle the form submission. This script will be responsible for processing the submitted data and taking appropriate actions (e.g., storing the data in a database, sending emails, etc.).
+
+    Action URL: Set the action attribute of the HTML form to point to the server-side script that will handle the form submission.
+
+    Submit Button: Ensure that the submit button's name attribute matches what your server-side script is expecting. In your case, it's btnsubmit.
+
+    Server-side Handling: In the server-side script, you can access the submitted data using the $_POST superglobal in PHP. For example:
+
+php
+
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+
+// Process the data (e.g., store in database, send emails)
+
+// Return a response to indicate the form submission status
+$response = array('status' => 'success', 'message' => 'Form submitted successfully');
+echo json_encode($response);
+
+    JavaScript Handling: In your JavaScript code, you can use the $.ajax function (or other similar functions) to submit the form data to the server-side script using the POST method. You can then check the response from the server to determine if the submission was successful.
+
+Here's an example of how you might modify your JavaScript code:
+
+javascript
+
+$("#contactform").submit(function(e) {
+    e.preventDefault();
+
+    var formData = {
+        name: $("#txtName").val(),
+        phone: $("#txtPhone").val(),
+        message: $("#txtMessage").val(),
+        btnsubmit: "submit"
+    };
+
+    $.ajax({
+        url: "path/to/server-side-script.php", // Change this to your server-side script URL
+        type: "POST",
+        dataType: "json",
+        data: formData,
+        success: function(response) {
+            if (response.status === "success") {
+                // Form submitted successfully
+                console.log("Form submitted successfully");
+            } else {
+                console.log("Form submission failed");
+            }
+        },
+        error: function() {
+            console.log("An error occurred while submitting the form");
+        }
+    });
+});
+
+Remember to replace "path/to/server-side-script.php" with the actual path to your server-side script that handles form submissions. The server-side script should process the data and return a JSON response indicating the status of the form submission.
+
+After submitting the form, check the browser console for the output messages to determine if the form was submitted successfully or if there were any errors. Additionally, you can check your server-side logs for any errors or confirmations related to the form submission process.
+<div class="contact-section-form">
+    <h2>Get in touch</h2>
+    <label>I am enquiring for</label>
+    <select name="selContactFor" id="selContactFor" class="form-control">
+        <option value="Retail User">Myself</option>
+        <option value="School">My School</option>
+        <option value="College/University">My College</option>
+        <option value="Corporate">My Company</option>
+        <option value="Government">A Government Agency</option>
+    </select>
+
+    <input class="form-control" type="text" name="txtPerson" id="txtPerson" onkeyup="this.setAttribute('value', this.value);" value="" />
+    <div class="placeholder-block">
+        <span id="College_UniversityDiv" class="NotMyDiv placeholder">Name of the College</span>
+        <span id="SchoolDiv" class="NotMyDiv placeholder">Name of the School</span>
+        <span id="CorporateDiv" class="NotMyDiv placeholder">Name of the Company</span>
+        <span id="GovernmentDiv" class="NotMyDiv placeholder">Name of the Agency</span>
+    </div>
+
+    <div class="form-field">
+        <input type="text" name="name" id="txtName" class="form-field-text" placeholder="Name" required="" />
+    </div>
+    <div class="form-field">
+        <input type="text" name="phone" id="txtPhone" class="form-field-text" placeholder="Phone" required="" />
+    </div>
+    <div class="form-field">
+        <input type="email" name="email" id="txtEmail" class="form-field-text" placeholder="Email" required="" />
+    </div>
+    <div class="form-field">
+        <textarea name="message" id="txtMessage" class="form-field-text" placeholder="Message" required=""></textarea>
+    </div>
+    <button class="btn-default" name="btnsubmit" id="btnsubmit" value="submit">Submit</button>
+</div>
+how to change this code dynamically from database in codeigniter 
+<?php
+
+class CourseController extends CI_Controller {
+    public function index() {
+        $this->load->model('Course_model');
+        $data['course_content'] = $this->Course_model->getCourseContent();
+        $this->load->view('course_view', $data);
+    }
+}
+
+<h1>The topics are</h1>
+<?php foreach ($course_content as $content) { ?>
+    <button class="course-content-accordion course-content-accordion-active"><?= $content['section_title'] ?></button>
+    <div class="course-content-panel" style="display: block;">
+        <div class="course-content-table" data-sticky-container>
+            <div class="course-content-table-rowNo"><span data-sticky 
+                data-sticky-class="is-sticky" data-margin-top="100"><?= $content['row_no'] ?></span></div>
+            <div class="course-content-table-rowTitle"><span data-sticky 
+                data-sticky-class="is-sticky" data-margin-top="108"><?= $content['row_title'] ?></span></div>
+            <div class="course-content-table-rowContent">
+                <ul>
+                    <?php foreach (explode("\n", $content['row_content']) as $item) { ?>
+                        <li><?= $item ?></li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+give function for connecting database for this code
+class Course_model extends CI_Model {
+    public function getCourseContent() {
+        return $this->db->get('course_content')->result_array();
+    }
+}
+
+Dynamic change in geneqa; comnmicTION 
+
+
+<div class="title-tab-contents">
+    <div class="title-tab-main title-tab-main-label pad-rgt">
+        <!-- GENERAL ENGLISH -->
+        <?php foreach ($courses as $course) { ?>
+        <div class="title-tab-header align-flx-end">
+            <a href="<?= $course['link'] ?>" target="_blank" title="Click for more details" class="default-anchor">
+                <span class="title-tab-result-header"><?= $course['title'] ?></span>
+            </a>
+            <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+            <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+        </div>
+        <div class="title-tab-row"><?= $course['coaching_type'] ?></div>
+        <div class="title-tab-row"><?= $course['live_classes'] ?></div>
+        <div class="title-tab-row"><?= $course['course_duration'] ?></div>
+        <div class="title-tab-row title-tab-row-months">
+            <?php foreach ($course['validities'] as $validity) { ?>
+                <a href="javascript:void(0)" class="border-btn <?= ($validity['active'] ? 'active' : '') ?>"
+                   data-validity="<?= $validity['months'] ?>"
+                   data-OriginalPrice="<?= $validity['original_price'] ?>"
+                   data-OfferPrice="<?= $validity['offer_price'] ?>">
+                    <?= $validity['months'] ?>
+                </a>
+            <?php } ?>
+        </div>
+        <div class="title-tab-row strikeOriginalPrice"><?= $course['original_price'] ?></div>
+        <div class="title-tab-row cellOfferPrice"><?= $course['offer_price'] ?></div>
+        <div class="title-tab-row webAndAppIcons">
+            <a href="<?= $course['web_link'] ?>" class="webAnchorLink" title="Login to STEP" target="_blank">
+                <img src="assets/images/chrome.png" alt="Web" />
+            </a>
+            <a href="<?= $course['app_link'] ?>" title="STEP Android App" target="_blank">
+                <img src="assets/images/play-store-step-app.png" alt="Android App" />
+            </a>
+        </div>
+        <div class="title-tab-row title-tab-row-content">
+            <p class="title-tab-row-content-para"><?= $course['course_description'] ?></p>
+            <a href="<?= $course['link'] ?>" target="_blank" title="Click for more details" class="default-anchor">
+                Click here to see topics.
+            </a>
+        </div>
+        <div class="title-tab-footer">
+            <a href="javascript:void(0)" class="btn-default">BUY</a>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+GIVE me the public  and private function with sample query for the html code 
+
+
+class CoursesController extends CI_Controller {
+    
+    public function index() {
+        // Load the model
+        $this->load->model('Courses_model');
+
+        // Get courses data from the model
+        $data['courses'] = $this->Courses_model->getCourses();
+
+        // Load the view
+        $this->load->view('courses_view', $data);
+    }
+}
+
+class Courses_model extends CI_Model {
+
+    public function getCourses() {
+        // Sample query to retrieve courses data from the database
+        $query = $this->db->get('courses');
+
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        } else {
+            return array(); // Return an empty array if no data found
+        }
+    }
+}
+this is the backend of the html ,how to connect the backend code with the dynamic html code ,rewrite the both code and give 
+public function index1() {
+    $model = model(Product::class);
+
+    if ($this->request->getMethod() === 'get' && $this->request->getGet('productid')) {
+        $productID = (int) $this->request->getGet('productid');
+        list($primaryProduct, $secondaryProduct) = $model->getProductMap($productID, 0);
+    } else {
+        $productID = 0;
+        list($primaryProduct, $secondaryProduct) = $model->getProductMap($productID, 1);
+    }
+
+    $PRODUCT_STORAGE_URL = 'https://storage.googleapis.com/assets.thehindustep.in/products/';
+    $primaryProductUrl = PRODUCT_STORAGE_URL . $primaryProduct . '.json';
+    $secondaryProductUrl = PRODUCT_STORAGE_URL . $secondaryProduct . '.json';
+
+    $pProduct = $model->getJsonData($primaryProductUrl);
+    $sProduct = $model->getJsonData($secondaryProductUrl);
+
+    $pLearn = $model->getProductlearn($pProduct['data']['product_id'], $sProduct['data']['product_id']);
+    $pDetailsInfo = $model->getProductDetailsInfo($pProduct['data']['product_id'], $sProduct['data']['product_id']);
+
+    $data = array(
+        'productid' => $productID,
+        'pProduct' => $pProduct['data'],
+        'sProduct' => $sProduct['data'],
+        'pLearn' => $pLearn,
+        'pDetailsInfo' => $pDetailsInfo
+    );
+
+    return view('templates/step-v5/general-communication-table', $data); // Note: Removed .html extension
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Your head section content here -->
+</head>
+<body>
+    <!-- HTML structure and content -->
+    <div class="ppp-tab">
+        <div class="ppp-tab-heading">
+            <!-- Display dynamic data -->
+            <div class="ppp-title"><?= esc($pProduct['title']) ?></div>
+            <!-- ... other dynamic content ... -->
+        </div>
+    </div>
+
+    <div class="title-tab-contents">
+        <div class="title-tab-main title-tab-main-label pad-rgt">
+            <?php foreach ($pLearn as $learn) { ?>
+                <div class="title-tab-header align-flx-end">
+                    <!-- Display dynamic data -->
+                    <div class="course-title"><?= esc($learn['title']) ?></div>
+                    <!-- ... other dynamic content ... -->
+                </div>
+                <!-- ... other dynamic content ... -->
+                <div class="title-tab-footer">
+                    <a href="javascript:void(0)" class="btn-default">BUY</a>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</body>
+</html>
+change this dynamic code with the backend code function index1 which i given to you ,change the name in the html related to the backend
+
+<div class="title-tab-contents">
+    <div class="title-tab-main title-tab-main-label pad-rgt">
+        <!-- GENERAL ENGLISH -->
+        <?php foreach ($pLearn as $course) { ?>
+        <div class="title-tab-header align-flx-end">
+            <a href="<?= $course->link ?>" target="_blank" title="Click for more details" class="default-anchor">
+                <span class="title-tab-result-header"><?= $course->title ?></span>
+            </a>
+            <div class="cellOfferPrice"><?= $course->offer_price ?></div>
+            <div class="strikeOriginalPrice"><?= $course->original_price ?></div>
+        </div>
+        <div class="title-tab-row"><?= $course->coaching_type ?></div>
+        <div class="title-tab-row"><?= $course->live_classes ?></div>
+        <div class="title-tab-row"><?= $course->course_duration ?></div>
+        <div class="title-tab-row title-tab-row-months">
+            <?php foreach ($course->validities as $validity) { ?>
+                <a href="javascript:void(0)" class="border-btn <?= ($validity->active ? 'active' : '') ?>"
+                   data-validity="<?= $validity->months ?>"
+                   data-OriginalPrice="<?= $validity->original_price ?>"
+                   data-OfferPrice="<?= $validity->offer_price ?>">
+                    <?= $validity->months ?>
+                </a>
+            <?php } ?>
+        </div>
+        <div class="title-tab-row strikeOriginalPrice"><?= $course->original_price ?></div>
+        <div class="title-tab-row cellOfferPrice"><?= $course->offer_price ?></div>
+        <div class="title-tab-row webAndAppIcons">
+            <a href="<?= $course->web_link ?>" class="webAnchorLink" title="Login to STEP" target="_blank">
+                <img src="assets/images/chrome.png" alt="Web" />
+            </a>
+            <a href="<?= $course->app_link ?>" title="STEP Android App" target="_blank">
+                <img src="assets/images/play-store-step-app.png" alt="Android App" />
+            </a>
+        </div>
+        <div class="title-tab-row title-tab-row-content">
+            <p class="title-tab-row-content-para"><?= $course->course_description ?></p>
+            <a href="<?= $course->link ?>" target="_blank" title="Click for more details" class="default-anchor">
+                Click here to see topics.
+            </a>
+        </div>
+        <div class="title-tab-footer">
+            <a href="javascript:void(0)" class="btn-default">BUY</a>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+<div class="slider-wrp">
+    <div class="slider multiple-items">
+        <?php foreach ($courses as $course): ?>
+        <div id="np<?= $course->product_id ?>" data-title="<?= $course->product_name ?>" data-price="<?= (int)$course->offer_price ?>" data-offerprice="<?= (int)$course->original_price ?>" data-pid="<?= (int)$course->product_id ?>">
+            <div class="slider-box active">
+                <div class="slider-img">
+                    <img src="<?= $course['product_bg_image'] ?>" alt="" />
+                    <span>RECOMMENDED</span>
+                </div>
+                <div class="slider-details">
+                    <div class="slider-info" id="newproductinfo<?= $course['product_id'] ?>">
+                        <h2><?= $course['product_name'] ?></h2>
+                        <ul>
+                            <?php $features = explode('|', $course['product_features']); ?>
+                            <?php foreach ($features as $feature): ?>
+                            <li><?= $feature ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <div class="pform" id="np<?= $course['product_id'] ?>Form">
+                        <div class="form-box" id="newproductDivForm<?= $course['product_id'] ?>">
+                            <form>
+                                <h3><?= $pDetailsInfo['lessons'] ?></h3>
+                                <button type="button"><span>₹<?= (int)$course['original_price'] ?></span> ₹<?= (int)$course['offer_price'] ?> Buy Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>-->
+
+<!-- ... Remaining HTML ... -->
+<div class="title-tab-contents">
+    <div class="title-tab-main title-tab-main-label pad-rgt">
+        <!-- GENERAL ENGLISH -->
+        <?php foreach ($pLearn as $topic) { ?>
+        <div class="title-tab-main-flex-1">
+            <div class="title-tab-header">
+                <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                <span class="title-tab-result-header"><?= $topic->topic_name ?></span>
+                </a>
+                <div class="cellOfferPrice"><?= $topic->offer_price ?></div>
+                <div class="strikeOriginalPrice"><?= $topic->original_price ?></div>
+            </div>
+            <!-- ... other dynamic content ... -->
+            <div class="title-tab-row title-tab-row-content">
+                <p class="title-tab-row-content-para"><?= $topic->course_description ?></p>
+                <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                    Click here to see topics.
+                </a>
+            </div>
+            <!-- ... other dynamic content ... -->
+            <div class="title-tab-footer">
+                <a href="javascript:void(0)" class="btn-default">BUY</a>
+            </div>
+        </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+corrected code 
+
+<div class="title-tab-contents">
+    <?php foreach ($CourseDetails as $topic) { ?>
+    <div class="title-tab-main title-tab-main-label pad-rgt">
+        <div class="title-tab-header">
+          <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                <span class="title-tab-result-header"><?= $topic['product_name'] ?></span>
+            </a>
+        </div>
+        <div class="cellOfferPrice"><?= $topic['offer_price'] ?></div>
+        <div class="strikeOriginalPrice"><?= $topic['original_price'] ?></div>
+        <div class="title-tab-row">
+            <?php if ($topic['product_features']) { ?>
+                <?= $topic['product_features'] ?>
+            <?php } ?>
+            <span class="popover-element" data-toggle="popover" data-content="<?= $topic['product_meta_desc'] ?>">i</span>
+        </div>
+        <div class="title-tab-row">
+            <a href="general-communication-unlimited.html" target="_blank" title="Click here to see topics" class="default-anchor">Click here to see topics.</a>
+        </div>
+        <div class="title-tab-footer">
+            <a href="javascript:void(0)" class="btn-default">BUY</a>
+        </div>
+    </div>
+    <?php } ?>
+</div>
+
+<div class="title-tab-contents">
+    <div class="title-tab-main title-tab-main-label pad-rgt">
+        <?php foreach ($CourseDetails as $course) { ?>
+          <div class="title-tab-main-flex-1">
+            <div class="title-tab-header">
+                <span><?= $course['product_name'] ?></span>
+            </div>
+            <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+            <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+            <div class="title-tab-row">
+                <?= $course['product_features'] ?>
+                <span class="popover-element" data-toggle="popover" data-content="<?= $course['product_features'] ?>">i</span>
+            </div>
+            <div class="title-tab-row title-tab-row-<?= $course['product_type'] ?>">
+                <div><?= $course['product_type'] ?></div>
+                <span class="popover-element" data-toggle="popover" data-content="<?= $course['product_meta_desc'] ?>">i</span>
+            </div>
+            <div class="title-tab-row">
+                Validity <span class="months">(months)</span> <span class="popover-element popover-hidden" data-text="">i</span>
+            </div>
+            <div class="title-tab-row">
+                Original price <span class="popover-element popover-hidden" data-text="">i</span>
+            </div>
+            <div class="title-tab-row">
+                Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+            </div>
+            <div class="title-tab-row">
+                Available on web and app <span class="popover-element popover-hidden" data-text="">i</span>
+            </div>
+            <div class="title-tab-row">
+                Why you should buy this course <span class="popover-element popover-hidden" data-text="">i</span>
+            </div>
+            <div class="title-tab-footer">
+                <a href="general-communication-unlimited.html" class="btn-default" target="_blank">BUY</a>
+            </div>
+        <?php } ?>
+    </div>
+</div>
+
+
+<div class="title-tab-contents">
+    <?php $commonValuesSet = false; // Flag to check if common values have been set ?>
+    <?php foreach ($CourseDetails as $index => $course) { ?>
+        <?php if (!$commonValuesSet) { ?>
+            <!-- Common values that should only appear once -->
+            <div class="title-tab-main title-tab-main-label pad-rgt">
+                <!-- ... (other common content) ... -->
+                <div class="title-tab-row">
+                    Coach calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['coach_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Live calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['live_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Online calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['online_classes'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Validity (months) <span class="months"><?= $course['licence_expiry_days'] ?></span> <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Original price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Available on web and app
+                </div>
+                <?php $commonValuesSet = true; // Mark common values as set ?>
+            </div>
+        <?php } ?>
+
+        <!-- Individual course values -->
+        <div class="title-tab-main title-tab-main-texts title-tab-main-flex title-tab-main-flex-<?= $index ?>" id="title-tab-main-texts-<?= $index ?>">
+            <!-- ... (other content specific to each course) ... -->
+            <div class="title-tab-header">
+                <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                    <span class="title-tab-result-header"><?= $course['product_name'] ?></span>
+                </a>
+                <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+                <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+            </div>
+            <!-- ... (other content specific to each course) ... -->
+
+            <!-- Add webAndAppIcons section here for each product -->
+            <div class="title-tab-row webAndAppIcons">
+                <a href="https://english.steptest.in/" class="webAnchorLink" title="Login to STEP" target="_blank">
+                    <img src="assets/images/chrome.png" alt="Web" />
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.hindu.step" title="STEP Android App" target="_blank">
+                    <img src="assets/images/play-store-step-app.png" alt="Android App" />
+                </a>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
+
+<div class="title-tab-contents">
+    <?php $commonValuesSet = false; ?>
+    <?php foreach ($CourseDetails as $index => $course) { ?>
+        <?php if (!$commonValuesSet) { ?>
+            <div class="title-tab-main title-tab-main-label pad-rgt">
+                <div class="title-tab-row">
+                    Coach calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['coach_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Live calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['live_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Online calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['online_classes'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Validity (months) <span class="months"><?= $course['licence_expiry_days'] ?></span> <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Original price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Available on web and app
+                </div>
+                <?php $commonValuesSet = true; ?>
+            </div>
+        <?php } ?>
+
+        <div class="title-tab-main-texts">
+            <div class="title-tab-main" data-target="GeneralCommunication" data-id="title-tab-main-texts-<?= $index ?>" id="title-tab-main-texts-<?= $index ?>">
+                <div class="title-tab-main-flex-1">
+                    <div class="title-tab-header">
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                            <span class="title-tab-result-header"><?= $course['product_name'] ?></span>
+                        </a>
+                        <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+                        <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    </div>
+                    <div class="title-tab-row"><?= $course['coach_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['live_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['online_classes'] ?></div>
+                    <div class="title-tab-row"><?= $course['licence_expiry_days'] ?> hours</div>
+                    <div class="title-tab-row title-tab-row-months">
+                        <a href="javascript:void(0)" class="border-btn active"
+                           data-validity="<?= $course['licence_expiry_days'] ?>"
+                           data-OriginalPrice="<?= $course['original_price'] ?>"
+                           data-OfferPrice="<?= $course['offer_price'] ?>"><?= $course['licence_expiry_days'] ?></a>
+                    </div>
+                    <div class="title-tab-row strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    <div class="title-tab-row cellOfferPrice"><?= $course['offer_price'] ?></div>
+                    <div class="title-tab-row webAndAppIcons">
+                        <a href="https://english.steptest.in/" class="webAnchorLink" title="Login to STEP" target="_blank">
+                            <img src="assets/images/chrome.png" alt="Web" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hindu.step" title="STEP Android App" target="_blank">
+                            <img src="assets/images/play-store-step-app.png" alt="Android App" />
+                        </a>
+                    </div>
+                    <div class="title-tab-row title-tab-row-content">
+                        <p class="title-tab-row-content-para"><?= $course['product_meta_desc'] ?></p>
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">Click here to see topics.</a>
+                    </div>
+                </div>
+                <div class="title-tab-footer">
+                    <a href="javascript:void(0)" class="btn-default">BUY</a>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
+
+<div class="title-tab-row"><?= $course['coach_calls'] ?></div>
+<div class="title-tab-row"><?= $course['live_calls'] ?></div>
+<div class="title-tab-row"><?= $course['online_classes'] ?></div>
+i want if the value of coachcalls,livecalls,online classes is null i want to display None in the web page 
+
+<div class="title-tab-contents">
+    <?php $commonValuesSet = false; ?>
+    <?php foreach ($CourseDetails as $index => $course) { ?>
+        <?php if (!$commonValuesSet) { ?>
+            <div class="title-tab-main title-tab-main-label pad-rgt">
+                <div class="title-tab-row">
+                    Coach calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['coach_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Live calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['live_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Online calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['online_classes'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Validity (months) <span class="months"><?= $course['licence_expiry_days'] ?></span> <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Original price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Available on web and app
+                </div>
+                <?php $commonValuesSet = true; ?>
+            </div>
+        <?php } ?>
+        
+        <div class="title-tab-main-texts">
+            <div class="title-tab-main" data-target="GeneralCommunication" data-id="title-tab-main-texts-<?= $index ?>" id="title-tab-main-texts-<?= $index ?>">
+                <div class="title-tab-main-flex-1">
+                    <div class="title-tab-header">
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                            <span class="title-tab-result-header"><?= $course['product_name'] ?></span>
+                        </a>
+                        <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+                        <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    </div>
+                    <div class="title-tab-row"><?= $course['coach_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['live_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['online_classes'] ?></div>
+                    <div class="title-tab-row"><?= $course['licence_expiry_days'] ?> hours</div>
+                    <div class="title-tab-row title-tab-row-months">
+                        <a href="javascript:void(0)" class="border-btn active"
+                           data-validity="<?= $course['licence_expiry_days'] ?>"
+                           data-OriginalPrice="<?= $course['original_price'] ?>"
+                           data-OfferPrice="<?= $course['offer_price'] ?>"><?= $course['licence_expiry_days'] ?></a>
+                    </div>
+                    <div class="title-tab-row strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    <div class="title-tab-row cellOfferPrice"><?= $course['offer_price'] ?></div>
+                    <div class="title-tab-row webAndAppIcons">
+                        <a href="https://english.steptest.in/" class="webAnchorLink" title="Login to STEP" target="_blank">
+                            <img src="assets/images/chrome.png" alt="Web" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hindu.step" title="STEP Android App" target="_blank">
+                            <img src="assets/images/play-store-step-app.png" alt="Android App" />
+                        </a>
+                    </div>
+                    <div class="title-tab-row title-tab-row-content">
+                        <p class="title-tab-row-content-para"><?= $course['product_meta_desc'] ?></p>
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">Click here to see topics.</a>
+                    </div>
+                </div>
+                <div class="title-tab-footer">
+                    <a href="javascript:void(0)" class="btn-default">BUY</a>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+in this code i want to show the bestseller only to the last product in the loop and the header should come above the coach calls itself 
+
+<div class="title-tab-contents">
+    <?php $commonValuesSet = false; ?>
+    <?php $lastIndex = count($CourseDetails) - 1; // Get the index of the last item ?>
+    <?php foreach ($CourseDetails as $index => $course) { ?>
+        <?php if (!$commonValuesSet) { ?>
+            <div class="title-tab-main title-tab-main-label pad-rgt">
+                <div class="title-tab-row">
+                    <!-- Move the header above Coach calls -->
+                    <span class="bestSeller <?= $index === $lastIndex ? 'active' : '' ?>">Best seller</span>
+                    Coach calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['coach_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Live calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['live_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Online calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['online_classes'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Validity (months)  <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Original price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Available on web and app
+                </div>
+                <div class="title-tab-row">
+                    Why you should buy this course 
+                </div>
+                <?php $commonValuesSet = true; ?>
+            </div>
+        <?php } ?>
+
+        <div class="title-tab-main-texts">
+            <div class="title-tab-main" data-target="GeneralCommunication" data-id="title-tab-main-texts-<?= $index ?>" id="title-tab-main-texts-<?= $index ?>">
+                <div class="title-tab-main-flex-1">
+                    <div class="title-tab-header">
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                            <span class="title-tab-result-header"><?= $course['product_name'] ?></span>
+                        </a>
+                        <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+                        <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    </div>
+                    <div class="title-tab-row"><?= $course['coach_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['live_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['online_classes'] ?></div>
+                    <div class="title-tab-row title-tab-row-months">
+                        <a href="javascript:void(0)" class="border-btn active"
+                           data-validity="<?= $course['licence_expiry_days'] ?>"
+                           data-OriginalPrice="<?= $course['original_price'] ?>"
+                           data-OfferPrice="<?= $course['offer_price'] ?>"><?= $course['licence_expiry_days'] ?></a>
+                    </div>
+                    <div class="title-tab-row strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    <div class="title-tab-row cellOfferPrice"><?= $course['offer_price'] ?></div>
+                    <div class="title-tab-row webAndAppIcons">
+                        <a href="https://english.steptest.in/" class="webAnchorLink" title="Login to STEP" target="_blank">
+                            <img src="assets/images/chrome.png" alt="Web" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hindu.step" title="STEP Android App" target="_blank">
+                            <img src="assets/images/play-store-step-app.png" alt="Android App" />
+                        </a>
+                    </div>
+                    <div class="title-tab-row title-tab-row-content">
+                        <p class="title-tab-row-content-para"><?= $course['product_meta_desc'] ?></p>
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">Click here to see topics.</a>
+                    </div>
+                </div>
+                <div class="title-tab-footer">
+                    <a href="javascript:void(0)" class="btn-default">BUY</a>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+
+<div class="title-tab-header align-flx-end"> only this is missing in the dynamic code from the static code but if i inclide this ,its changing the whole design where should i add this line so that i can move the header above the Coach calls  
+<div class="title-tab-contents">
+    <?php $commonValuesSet = false; ?>
+    <?php $lastIndex = count($CourseDetails) - 1; // Get the index of the last item ?>
+    <?php foreach ($CourseDetails as $index => $course) { ?>
+        <?php if (!$commonValuesSet) { ?>
+            <div class="title-tab-main title-tab-main-label pad-rgt">
+                <div class="title-tab-row">
+                    <!-- Move the header above Coach calls -->
+                    <?php if ($index === $lastIndex) { ?>
+                        <span class="bestSeller active">Best seller</span>
+                    <?php } ?>
+                    Coach calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['coach_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Live calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['live_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Online calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['online_classes'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Validity (months)  <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Original price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Available on web and app
+                </div>
+                <div class="title-tab-row">
+                    Why you should buy this course 
+                </div>
+                <?php $commonValuesSet = true; ?>
+            </div>
+        <?php } ?>
+
+        <div class="title-tab-main-texts">
+            <div class="title-tab-main" data-target="GeneralCommunication" data-id="title-tab-main-texts-<?= $index ?>" id="title-tab-main-texts-<?= $index ?>">
+                <div class="title-tab-main-flex-1">
+                    <div class="title-tab-header <?php if ($index === $lastIndex) echo 'align-flx-end'; ?>">
+                        <span class="bestSeller">Best seller</span>
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                            <span class="title-tab-result-header"><?= $course['product_name'] ?></span>
+                        </a>
+                        <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+                        <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    </div>
+                    <div class="title-tab-row"><?= $course['coach_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['live_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['online_classes'] ?></div>
+                    <div class="title-tab-row title-tab-row-months">
+                        <a href="javascript:void(0)" class="border-btn active"
+                           data-validity="<?= $course['licence_expiry_days'] ?>"
+                           data-OriginalPrice="<?= $course['original_price'] ?>"
+                           data-OfferPrice="<?= $course['offer_price'] ?>"><?= $course['licence_expiry_days'] ?></a>
+                    </div>
+                    <div class="title-tab-row strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    <div class="title-tab-row cellOfferPrice"><?= $course['offer_price'] ?></div>
+                    <div class="title-tab-row webAndAppIcons">
+                        <a href="https://english.steptest.in/" class="webAnchorLink" title="Login to STEP" target="_blank">
+                            <img src="assets/images/chrome.png" alt="Web" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hindu.step" title="STEP Android App" target="_blank">
+                            <img src="assets/images/play-store-step-app.png" alt="Android App" />
+                        </a>
+                    </div>
+                    <div class="title-tab-row title-tab-row-content">
+                        <p class="title-tab-row-content-para"><?= $course['product_meta_desc'] ?></p>
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">Click here to see topics.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+in this the best sell should come only for the  id="title-tab-main-texts-2"  ,rewrite the code aacording to that 
+<div class="title-tab-contents">
+    <?php $commonValuesSet = false; ?>
+    <?php foreach ($CourseDetails as $index => $course) { ?>
+        <?php if (!$commonValuesSet) { ?>
+            <div class="title-tab-main title-tab-main-label pad-rgt">
+                <div class="title-tab-row">
+                    Coach calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['coach_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Live calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['live_calls'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Online calls <span class="popover-element" data-toggle="popover" data-content="<?= $course['online_classes'] ?>">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Validity (months)  <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Original price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Offer price <span class="popover-element popover-hidden" data-text="">i</span>
+                </div>
+                <div class="title-tab-row">
+                    Available on web and app
+                </div>
+                <div class="title-tab-row">
+                    Why you should buy this course 
+                </div>
+                <?php $commonValuesSet = true; ?>
+            </div>
+        <?php } ?>
+
+        <div class="title-tab-main-texts">
+            <div class="title-tab-main" data-target="GeneralCommunication" data-id="title-tab-main-texts-<?= $index ?>" id="title-tab-main-texts-<?= $index ?>">
+                <div class="title-tab-main-flex-1">
+                    <?php if ($index === 2) { // Check if this is the element with id="title-tab-main-texts-2" ?>
+                        <div class="title-tab-header">
+                            <span class="bestSeller">Best seller</span>
+                        </div>
+                    <?php } ?>
+                    <div class="title-tab-header"> <!-- Move the header here for all products -->
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">
+                            <span class="title-tab-result-header"><?= $course['product_name'] ?></span>
+                        </a>
+                        <div class="cellOfferPrice"><?= $course['offer_price'] ?></div>
+                        <div class="strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    </div>
+                    <div class="title-tab-row"><?= $course['coach_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['live_calls'] ?></div>
+                    <div class="title-tab-row"><?= $course['online_classes'] ?></div>
+                    <div class="title-tab-row title-tab-row-months">
+                        <a href="javascript:void(0)" class="border-btn active"
+                           data-validity="<?= $course['licence_expiry_days'] ?>"
+                           data-OriginalPrice="<?= $course['original_price'] ?>"
+                           data-OfferPrice="<?= $course['offer_price'] ?>"><?= $course['licence_expiry_days'] ?></a>
+                    </div>
+                    <div class="title-tab-row strikeOriginalPrice"><?= $course['original_price'] ?></div>
+                    <div class="title-tab-row cellOfferPrice"><?= $course['offer_price'] ?></div>
+                    <div class="title-tab-row webAndAppIcons">
+                        <a href="https://english.steptest.in/" class="webAnchorLink" title="Login to STEP" target="_blank">
+                            <img src="assets/images/chrome.png" alt="Web" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hindu.step" title="STEP Android App" target="_blank">
+                            <img src="assets/images/play-store-step-app.png" alt="Android App" />
+                        </a>
+                    </div>
+                    <div class="title-tab-row title-tab-row-content">
+                        <p class="title-tab-row-content-para"><?= $course['product_meta_desc'] ?></p>
+                        <a href="general-communication-unlimited.html" target="_blank" title="Click for more details" class="default-anchor">Click here to see topics.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+</div>
